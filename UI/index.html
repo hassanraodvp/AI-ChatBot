@@ -4,9 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/favicon/bot.webp" type="image/webp" />
+    <!-- ...existing code... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- ...existing code... -->
     <title>AI - ChatBot</title>
     <link href="./output.css" rel="stylesheet" />
+    <!-- Textillate  -->
+    <link rel="stylesheet" href="./assets/textillate/animate.css" />
   </head>
-  <body></body>
-  <script src="./custom.js"></script>
+  <body>
+    <section
+      class="Oval min-h-screen flex items-center justify-center"
+      class="mb-3"
+    >
+      <div class="grid">
+        <div class="flex items-center justify-center text-center">
+          <canvas
+            id="canvasOne"
+            width="300"
+            height="320"
+            class="absolute"
+          ></canvas>
+
+          <div id="bot">
+            <div class="square flex items-center justify-center">
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </div>
+          </div>
+        </div>
+        <h1
+          class="text-white pt-16 tracking-wide text-2xl text-center"
+          id="animated-text"
+        >
+          Ask Me Anything?
+        </h1>
+      </div>
+    </section>
+  </body>
+  <!-- Jquery  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Custom Js  -->
+  <script src="./js/custom.js"></script>
+  <!-- Particles.js  -->
+  <script src="./js/particles-js/script.js"></script>
+  <!-- Textillate  -->
+  <script src="./assets/textillate/jquery.lettering.js"></script>
+  <script src="./assets/textillate/jquery.fittext.js"></script>
+  <script src="http://jschr.github.io/textillate/jquery.textillate.js"></script>
 </html>
