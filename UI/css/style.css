@@ -9,6 +9,15 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
 }
+@media only screen and (max-width: 1350px) {
+  .container {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+}
+i {
+  cursor: pointer;
+}
 .square {
   position: relative;
   width: 420px;

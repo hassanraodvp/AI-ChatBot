@@ -8,51 +8,102 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <!-- ...existing code... -->
     <title>AI - ChatBot</title>
-    <link href="./output.css" rel="stylesheet" />
+    <link href="./css/output.css" rel="stylesheet" />
     <!-- Textillate  -->
     <link rel="stylesheet" href="./assets/textillate/animate.css" />
+    <!-- Remix Icon  -->
+    <link rel="stylesheet" href="./css/Remix_Icon/fonts/remixicon.css" />
   </head>
   <body>
-    <section
-      class="Oval min-h-screen flex items-center justify-center"
-      class="mb-3"
-    >
-      <div class="grid">
-        <div class="flex items-center justify-center text-center">
-          <canvas
-            id="canvasOne"
-            width="300"
-            height="320"
-            class="absolute"
-          ></canvas>
+    <div class="site-wrapper container mx-auto">
+      <section class="Oval min-h-screen flex items-center justify-center mb-3">
+        <div class="grid">
+          <div class="relative flex items-center justify-center text-center">
+            <canvas
+              id="canvasOne"
+              width="300"
+              height="320"
+              class="absolute z-50"
+            ></canvas>
 
-          <div id="bot">
-            <div class="square flex items-center justify-center">
-              <span class="circle"></span>
-              <span class="circle"></span>
-              <span class="circle"></span>
+            <div id="bot" class="z-0">
+              <div class="square flex items-center justify-center">
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+            </div>
+          </div>
+          <h1
+            class="text-white pt-16 tracking-wide text-2xl text-center"
+            id="animated-text"
+          >
+            Ask Me Anything?
+          </h1>
+          <div class="relative flex justify-center my-8">
+            <input
+              id="search"
+              type="text"
+              name="text"
+              placeholder="Search something..."
+              class="peer w-10 h-10 rounded-full border border-[#5b6bff] text-[#5b6bff] outline-none px-4 py-[18px] bg-white transition-all duration-500 ease-in-out placeholder-transparent tracking-wide focus:placeholder-gray-500 focus:text-black focus:bg-white focus:border-[#5b6bff] focus:w-full md:focus:w-[95%] focus:pl-12 focus:pr-20"
+            />
+
+            <!-- Search Icon -->
+            <label
+              for="search"
+              class="ri-search-line absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl text-[#5b6bff] transition-all duration-500 ease-in-out peer-focus:left-6 cursor-pointer peer-focus:-translate-x-0"
+            ></label>
+
+            <i
+              class="ri-chat-3-line absolute right-22 top-1/2 -translate-y-1/2 text-xl text-green-500 opacity-0 transition-opacity duration-300 ease-in-out peer-focus:opacity-100"
+            ></i>
+
+            <i
+              class="ri-mic-line absolute right-14 top-1/2 -translate-y-1/2 text-xl text-blue-500 opacity-0 transition-opacity duration-300 ease-in-out peer-focus:opacity-100"
+              id="mic_btn"
+            ></i>
+            <i
+              class="ri-settings-5-line absolute right-6 top-1/2 -translate-y-1/2 text-xl text-gray-900 opacity-0 transition-opacity duration-300 ease-in-out peer-focus:opacity-100"
+            ></i>
+          </div>
+        </div>
+      </section>
+      <section class="SiriWave pb-10" hidden>
+        <div class="container mx-auto">
+          <div class="flex items-center justify-center min-h-screen">
+            <div>
+              <p
+                class="text-left text-gray-200 text-lg mb-2 tracking-wide siri-message"
+              >
+                Hello, I am your AI assistant. How can I help you today?
+              </p>
+              <div id="siri-container"></div>
             </div>
           </div>
         </div>
-        <h1
-          class="text-white pt-16 tracking-wide text-2xl text-center"
-          id="animated-text"
-        >
-          Ask Me Anything?
-        </h1>
-      </div>
-    </section>
+      </section>
+    </div>
   </body>
   <!-- Jquery  -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Jquery UI (required for .slider) -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+  />
   <!-- Custom Js  -->
+
   <script src="./js/custom.js"></script>
   <!-- Particles.js  -->
-  <script src="./js/particles-js/script.js"></script>
+  <script src="./js/script.js"></script>
   <!-- Textillate  -->
   <script src="./assets/textillate/jquery.lettering.js"></script>
   <script src="./assets/textillate/jquery.fittext.js"></script>
   <script src="http://jschr.github.io/textillate/jquery.textillate.js"></script>
   <!-- Eel Python  -->
-   <script src="/eel.js"></script>
+  <script src="/eel.js"></script>
+  <!-- Siri Wave  -->
+  <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
 </html>
