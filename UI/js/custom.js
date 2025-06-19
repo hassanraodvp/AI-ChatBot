@@ -1,3 +1,4 @@
+// Text animate below Jarvis UI 
 $(document).ready(function () {
   $("#animated-text").textillate({
     loop: true,
@@ -41,5 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     eel.playAssistantSound()
     $(".Oval").attr("hidden", true);
     $(".SiriWave").attr("hidden", false);
+    eel.allCommands()
   });
 });

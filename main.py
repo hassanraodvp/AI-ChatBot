@@ -1,5 +1,6 @@
 import eel
 from engine.features import *
+from engine.command import *
 playAssistantSound()
 
 eel.init("UI")
